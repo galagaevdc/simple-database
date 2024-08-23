@@ -1,0 +1,20 @@
+server:
+  port : 8081
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/testservicedb?user=testserviceuser@test-payment-dev&password=Testtest!1
+    driver-class: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQL10Dialect
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      order_by:
+        default_null_ordering: last
+      hibernate:
+        jdbc:
+          time_zone: UTC
+        temp:
+          use_jdbc_metadata_defaults: false
